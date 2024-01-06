@@ -50,6 +50,11 @@ public class AdminController {
         Admin loginUser = adminService.login(admin);
         return Result.success(loginUser);
     }
+    @PostMapping("/register")
+    public Result register(@RequestBody Admin admin) {
+        adminService.add(admin);
+        return Result.success();
+    }
 
 
 }

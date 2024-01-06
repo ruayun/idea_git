@@ -19,6 +19,11 @@ public class Admin {
     private Integer age;
     @Column(name = "phone")
     private String phone;
+    @Column(name = "role")
+    private String role;
+
+    @Transient
+    private String token;
 
     public Integer getId() {
         return id;
@@ -66,5 +71,21 @@ public class Admin {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

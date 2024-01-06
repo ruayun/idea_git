@@ -1,14 +1,10 @@
 package com.example.entity;
 
-/**
- * @ClassName:Params
- * @Auther: zzh
- * @Description:
- * @Date: 2023/11/22 15:53
- */
 public class Params {
+
     private String name;
     private String phone;
+    private String author;
     private Integer pageNum;
     private Integer pageSize;
 
@@ -26,6 +22,14 @@ public class Params {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public Integer getPageNum() {
