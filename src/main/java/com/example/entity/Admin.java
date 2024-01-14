@@ -1,5 +1,7 @@
 package com.example.entity;
 
+import cn.hutool.core.annotation.Alias;
+
 import javax.persistence.*;
 
 @Table(name = "admin")
@@ -21,6 +23,11 @@ public class Admin {
     private String phone;
     @Column(name = "role")
     private String role;
+
+    @Alias("创建时间")
+    @Column(name = "create_time")
+    private String createTime;
+
 
     @Transient
     private String token;
@@ -87,5 +94,13 @@ public class Admin {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 }

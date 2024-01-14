@@ -11,6 +11,16 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.entity
+  configuration:
+    # 开启数据库表字段驼峰命名
+    map-underscore-to-camel-case: true
+    # 默认获取最大长度
+    default-fetch-size: 100
+    # 默认获取超时时间
+    default-statement-timeout: 30
+    # 开启控制台执行sql语句打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
 #分页插件
 pagehelper:
